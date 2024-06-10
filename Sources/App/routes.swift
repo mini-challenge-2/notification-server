@@ -35,8 +35,7 @@ func routes(_ app: Application) throws {
                 expiration: .immediately,
                 priority: .immediately,
                 topic: "com.liefransim.couple-telecathic",
-                payload: payload,
-                sound: .sound("default")
+                payload: payload
             )
 
             // Send the notification
