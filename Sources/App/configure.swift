@@ -2,7 +2,7 @@ import Vapor
 import APNS
 import APNSCore
 import VaporAPNS
-import JWTc
+import JWT
 import Crypto
 
 // configures your application
@@ -34,5 +34,5 @@ public func configure(_ app: Application) async throws {
     )
     
         // Routes
-        try routes(app)
+    try routes(app)
 }
