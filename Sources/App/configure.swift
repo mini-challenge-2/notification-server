@@ -14,6 +14,7 @@ public func configure(_ app: Application) async throws {
     let privateKeyData = try Data(contentsOf: privateKeyURL)
     let privateKeyString = String(data: privateKeyData, encoding: .utf8)!
     let privateKey = try P256.Signing.PrivateKey(pemRepresentation: privateKeyString)
+    print("PRIVATE KEY: " + privateKey)
 
     // Configure APNS client with JWT authentication
     let apnsConfig = APNSClientConfiguration(
