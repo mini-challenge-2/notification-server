@@ -10,7 +10,7 @@ public func configure(_ app: Application) async throws {
     // uncomment to serve files from /Public folder
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
     // register routes
-    let privateKeyURL = URL(fileURLWithPath: "/Users/liefransatriosim/Desktop/notificationServer/Sources/App/AuthKey S95F7MWX5R.p8")
+    let privateKeyURL = URL(fileURLWithPath: "./AuthKey S95F7MWX5R.p8")
     let privateKeyData = try Data(contentsOf: privateKeyURL)
     let privateKeyString = String(data: privateKeyData, encoding: .utf8)!
     let privateKey = try P256.Signing.PrivateKey(pemRepresentation: privateKeyString)
